@@ -1,0 +1,94 @@
+/* Загальні стилі */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+/* Структура сторінки */
+header {
+    height: 100px;
+    display: flex;
+    justify-content: space-around; /* Кнопки рівномірно по верхній панелі */
+    align-items: center;
+    background-color: #a8dadc;
+}
+
+main {
+    height: 500px;
+    display: flex;
+}
+
+footer {
+    height: 100px;
+    background-color: #cfd8dc;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Колонки */
+#leftPanel, #content, #rightPanel {
+    width: 33%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#leftPanel {
+    background-color: #ffe5d9;
+}
+
+#content {
+    background-color: #d0f0fd;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центруємо заголовок */
+}
+
+#content h2 {
+    text-align: center;
+    width: 100%;
+}
+
+#rightPanel {
+    background-color: #f7c6c7;
+}
+
+/* Таблиця */
+table {
+    width: 100%; /* Таблиця займає всю ширину середньої колонки */
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    cursor: pointer;
+    background-color: #a8dadc;
+}
+
+.highlight {
+    background-color: #ffddd2;
+}
+
+/* Лоадери */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
