@@ -1,9 +1,10 @@
 import { useContext, useRef, useState } from 'react'
-import { TaskContext } from '../App'
+import { TaskContext } from '../context/TaskContext'
 import TaskItem from './TaskItem'
 
 export default function TaskList() {
   const { filteredTasks, addTask } = useContext(TaskContext)
+
   const [text, setText] = useState('')
   const inputRef = useRef(null)
 
@@ -13,7 +14,7 @@ export default function TaskList() {
     addTask(text)
     setText('')
 
-    // фокус назад в інпут
+    // 🔹 фокус назад в інпут
     inputRef.current?.focus()
   }
 
