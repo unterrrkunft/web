@@ -13,12 +13,12 @@ export default function App() {
 
   const [filter, setFilter] = useState('all')
 
-  // 🔹 синхронізація з localStorage
+  // синхронізація з localStorage
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks))
   }, [tasks])
 
-  // 🔹 додати задачу
+  // додати задачу
   const addTask = useCallback((text) => {
     setTasks(prev => [
       ...prev,
@@ -30,12 +30,12 @@ export default function App() {
     ])
   }, [])
 
-  // 🔹 видалити
+  // видалити
   const deleteTask = useCallback((id) => {
     setTasks(prev => prev.filter(t => t.id !== id))
   }, [])
 
-  // 🔹 toggle виконання
+  // toggle виконання
   const toggleTask = useCallback((id) => {
     setTasks(prev =>
       prev.map(t =>
@@ -44,7 +44,7 @@ export default function App() {
     )
   }, [])
 
-  // 🔹 редагування
+  // редагування
   const editTask = useCallback((id, newText) => {
     setTasks(prev =>
       prev.map(t =>
@@ -53,7 +53,7 @@ export default function App() {
     )
   }, [])
 
-  // 🔹 фільтровані задачі (useMemo)
+  // фільтровані задачі (useMemo)
   const filteredTasks = useMemo(() => {
     switch (filter) {
       case 'active':
