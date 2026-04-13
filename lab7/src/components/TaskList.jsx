@@ -13,7 +13,7 @@ export default function TaskList() {
     addTask(text)
     setText('')
 
-    // 🔹 фокус назад в інпут
+    // фокус назад в інпут
     inputRef.current?.focus()
   }
 
